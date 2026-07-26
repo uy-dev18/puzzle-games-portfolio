@@ -648,6 +648,29 @@
     font-weight: 700;
   }
 
+  /* liên kết chính sách quyền riêng tư dưới hàng nút tải */
+  .privacy-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    border-bottom: 1px solid transparent;
+    transition: color .2s var(--ease), border-color .2s var(--ease);
+  }
+
+  .privacy-link:hover {
+    color: var(--accent);
+    border-bottom-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  }
+
+  .privacy-link svg {
+    width: 14px;
+    height: 14px;
+    flex: none;
+  }
+
   /* mini bàn cờ của Picture Swap Puzzle */
   .thumb.swap {
     background: linear-gradient(160deg, #1A0E33, #0C0820);
@@ -843,6 +866,22 @@
     color: var(--faint);
     font-family: var(--font-mono);
     font-size: 0.85rem;
+  }
+
+  footer .foot-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  footer .foot-links a {
+    color: var(--muted);
+    font-size: 0.85rem;
+    transition: color .2s var(--ease);
+  }
+
+  footer .foot-links a:hover {
+    color: var(--accent);
   }
 
   footer .made {
@@ -1066,6 +1105,14 @@
                 <span class="st"><small>Tải trên</small><b>Google Play</b></span>
               </a>
             </div>
+            <a class="privacy-link" href="picture-swap-puzzle/"
+              aria-label="Chính sách quyền riêng tư của Picture Swap Puzzle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Chính sách quyền riêng tư
+            </a>
           </div>
         </article>
 
@@ -1131,6 +1178,14 @@
                 <span class="st"><small>Tải trên</small><b>Google Play</b></span>
               </a>
             </div>
+            <a class="privacy-link" href="animals-match/"
+              aria-label="Chính sách quyền riêng tư của Animals Match">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Chính sách quyền riêng tư
+            </a>
           </div>
         </article>
 
@@ -1183,6 +1238,10 @@
         <!-- TODO: thêm email/liên kết liên hệ khi sẵn sàng -->
         <span class="soonline">Thông tin liên hệ sẽ được cập nhật</span>
       </div>
+      <nav class="foot-links" aria-label="Chính sách quyền riêng tư">
+        <a href="picture-swap-puzzle/">Quyền riêng tư · Picture Swap Puzzle</a>
+        <a href="animals-match/">Quyền riêng tư · Animals Match</a>
+      </nav>
       <p class="made">Thiết kế &amp; phát triển · <span id="year"></span></p>
     </div>
   </footer>
